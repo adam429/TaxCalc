@@ -13,9 +13,9 @@ TaxCalc 个税现金流计算器 的 微信小程序。
 > 依次是 欢迎页面 / 输入页面 / 结果页面
 
 <p float="left">
-  <img src="github_img/Page1.png" width="200" style="display:inline">
-  <img src="github_img/Page2.png" width="200" style="display:inline">
-  <img src="github_img/Page3.png" width="200" style="display:inline">
+  <img src="github_img/Page1.png" width="300" style="display:inline">
+  <img src="github_img/Page2.png" width="300" style="display:inline">
+  <img src="github_img/Page3.png" width="300" style="display:inline">
 </p>
 
 ### 配置

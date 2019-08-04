@@ -1,0 +1,53 @@
+<!--miniprogram/pages/salary_input/salary_input.wxml-->
+
+<view class="page">
+    <view class="container">
+        <view class="title">2019年个税现金流计算器</view>
+          <view class="weui-cells">
+            <view class="weui-cell ">
+                <view class="weui-cell__bd">
+                  <view class="desc">新版个人所得税计算器，计算每个月现金流。帮助您提前做好规划。</view>
+                </view>
+                <view class="weui-cell__ft">
+                  <image class="icon" src="../../images/page2.png" mode="aspectFit"></image>
+                </view>
+            </view>
+          </view>
+    </view>
+    <view class="fullsize">
+        <view class="weui-cell weui-cell_select">
+            <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                <view class="weui-label">所在城市</view>
+            </view>
+            <view class="weui-cell__bd">
+                <picker bindchange="bindCityChange" value="{{cityIndex}}" range="{{cities}}">
+                    <view class="weui-select weui-select_in-select-after">{{cities[cityIndex]}}</view>
+                </picker>
+            </view>
+        </view>
+    
+        <view class="weui-cells">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">税前收入</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" type="number" value="{{ salary }}" maxlength="6" bindinput="bindInputChange"/>
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-cell__bd">
+            <slider min="0" max="100000" step="100" value="{{ salary }}" bindchange="bindSliderChange" bindchanging="bindSliderChange"/>
+        </view>
+
+    </view>
+
+
+    <view class="weui-btn-area">
+        <button class="weui-btn" type="primary" bindtap="bindTap">计算</button>
+    </view>
+
+    <view class="footer">小船工作室 (Copyright 2019)</view>
+</view>
+

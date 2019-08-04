@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/landing_page/landing_page",
+    "pages/result_page/result_page",
+    "pages/salary_input/salary_input"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "个税现金流计算器",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+  }
+}
+

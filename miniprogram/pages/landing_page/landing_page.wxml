@@ -1,0 +1,28 @@
+<!--miniprogram/pages/landing_page/landing_page.wxml-->
+
+<view class="page">
+    <view class="container">
+        <view class="title">2019年个税现金流计算器</view>
+          <view class="weui-cells">
+            <view class="weui-cell ">
+                <view class="weui-cell__bd">
+                  <view class="desc">新版个人所得税计算器，计算每个月现金流。帮助您提前做好规划。</view>
+                </view>
+                <view class="weui-cell__ft">
+                  <image class="icon" src="../../images/page1.png" mode="aspectFit"></image>
+                </view>
+            </view>
+          </view>
+    </view>
+    <view class="container">
+      <view class="warning inline"> 重要提示: </view> 由于新税法的变化, 2019年开始每个月实际纳税额会逐月增加，每个月到手的钱会逐月减少。
+        <image src="../../images/TaxChart.png" mode="aspectFit"></image>
+        以50000的月工资为例，年初的税和年末的税<view class="warning inline">差8.4倍</view>，到手钱<view class="warning inline">差10000元</view>。提前知道你自己的个税现金流，提早做规划。
+    </view>
+
+    <view class="container">
+      <button class="weui-btn" type="primary" bindtap='bindTap' >立即计算 我的纳税表</button>
+    </view>
+    <view class="footer">小船工作室 (Copyright 2019)</view>
+</view>
+

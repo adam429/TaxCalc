@@ -1,0 +1,69 @@
+<!--miniprogram/pages/result_page/result_page.wxml-->
+
+
+<view class="page">
+    <view class="container">
+        <view class="title">2019年个税现金流计算器</view>
+          <view class="weui-cells">
+            <view class="weui-cell ">
+                <view class="weui-cell__bd">
+                  <view class="desc">新版个人所得税计算器，计算每个月现金流。帮助您提前做好规划。</view>
+                </view>
+                <view class="weui-cell__ft">
+                  <image class="icon" src="../../images/page3.png" mode="aspectFit"></image>
+                </view>
+            </view>
+          </view>
+    </view>
+    <view class="container">
+        <view>城市: {{city}}</view>
+        <view class="desc">养老保险 {{calcTable[0][5]}}% - 缴纳金额 {{calcTable[0][9]}}</view>
+        <view class="desc">医疗保险 {{calcTable[0][6]}}% - 缴纳金额 {{calcTable[0][10]}}</view>
+        <view class="desc">失业保险 {{calcTable[0][7]}}% - 缴纳金额 {{calcTable[0][11]}}</view>
+        <view class="desc">住房公积金 {{calcTable[0][8]}}% - 缴纳金额 {{calcTable[0][12]}}</view>
+        
+
+    </view>
+    <view class="fullsize">
+
+       <view class="table">
+         <view class="tr">
+           <view class="th narrow">月份</view>
+           <view class="th">税前收入</view>
+           <view class="th">三险一金</view>
+           <view class="th">扣税</view>
+           <view class="th">税后收入</view>
+         </view>
+            <block wx:for="{{calcTable}}" wx:key="item[0]" >
+              <view class="tr bg-g" wx:if="{{item[0] % 2 == 0}}">
+                <view class="td narrow">{{item[0]}}</view>
+                <view class="td">{{item[1]}}</view>
+                <view class="td">{{item[2]}}</view>
+                <view class="td">{{item[3]}}</view>
+                <view class="td warning">{{item[4]}}</view>
+              </view>
+              <view class="tr" wx:else>
+                <view class="td narrow">{{item[0]}}</view>
+                <view class="td">{{item[1]}}</view>
+                <view class="td">{{item[2]}}</view>
+                <view class="td">{{item[3]}}</view>
+                <view class="td warning">{{item[4]}}</view>
+              </view>
+            </block>
+            <view class="tr">
+              <view class="th narrow">合计</view>
+              <view class="th">{{total[1]}}</view>
+              <view class="th">{{total[2]}}</view>
+              <view class="th">{{total[3]}}</view>
+              <view class="th warning">{{total[4]}}</view>
+            </view>
+       </view>
+      <view class="container">
+        <view class="desc">【三险一金】 个人缴纳的 养老保险 医疗保险 失业保险 和 住房公积金 合称为三险一金</view>
+      </view>
+
+    </view>
+
+    <view class="footer">小船工作室 (Copyright 2019)</view>
+</view>
+

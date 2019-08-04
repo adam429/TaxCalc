@@ -10,6 +10,7 @@ TaxCalc 个税现金流计算器 的 微信小程序。
 
 ### 小程序界面
 
+<img src="github_img/Page1.png" width="150">
 ![page1](github_img/Page1.png | width=150)
 
 > 欢迎页面
